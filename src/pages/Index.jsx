@@ -93,11 +93,11 @@ class DiskExecutionEnv(BaseExecutionEnv):
 const Index = () => {
   const [displayedCode, setDisplayedCode] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const codeWords = codeSnippet.split(/\s+/);
+  const codeWords = codeSnippet.split(/(\s+|\n)/);
 
   const handleKeyPress = () => {
     if (currentIndex < codeWords.length) {
-      setDisplayedCode((prev) => prev + codeWords[currentIndex] + " ");
+      setDisplayedCode((prev) => prev + codeWords[currentIndex]);
       setCurrentIndex((prev) => prev + 1);
     }
   };
