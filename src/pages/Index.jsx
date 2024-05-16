@@ -114,9 +114,6 @@ const Index = () => {
       <VStack spacing={4}>
         <Text fontSize="2xl">Pretend to Code</Text>
         <Textarea value={displayedCode} readOnly height="100vh" width="100vw" bg="black" color="green" fontFamily="monospace" />
-        <Box>
-          <Text>Start typing to see the code appear!</Text>
-        </Box>
       </VStack>
     </Container>
   );
